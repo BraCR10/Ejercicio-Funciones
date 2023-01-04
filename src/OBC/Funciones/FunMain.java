@@ -8,13 +8,14 @@ package OBC.Funciones;
 public class FunMain {
     public static void main(String[] args) {
 
-        double narajas = funPrecio(89.2,7.2);
+        double narajas = funPrecio(89.5d);
         System.out.println("El precio de las naranjas es: "+narajas);
-        double manzanas = funPrecio(78.2,8.2);
+        double manzanas = funPrecio(78.2d);
         System.out.println("El precio de las manzanas es: "+manzanas);
     }
 
-     static double funPrecio(double precio, double iva) {
-        return iva + precio;
+     static double funPrecio(double precio) {
+        double iva= precio *0.25;//Suponiedo que el IVA equivale a el 25% del valor del producto
+        return  iva+precio;
     }
 }
